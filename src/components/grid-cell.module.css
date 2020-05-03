@@ -1,5 +1,10 @@
 .root {
+  justify-content: center;
   border: 2px solid gray;
+  font-size: xx-large;
+  align-items: center;
+  color: black;
+  display: flex;
   height: 100px;
   width: 100px;
 }
