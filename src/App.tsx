@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styles from "./main.module.css";
+import { GridCell } from "./components/grid-cell";
 
 function App() {
+  const [cellArray, setCellArray] = useState(Array(9).fill(" "));
+  const [currentPlayer, setCurrentPlayer] = useState("O");
+  const handleClick = (i: number) => {};
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.root}>
+      <div className={styles.board}>
+        {cellArray.map((i) => {
+          return <GridCell index={i} content={cellArray[i]} />;
+        })}
+      </div>
     </div>
   );
 }

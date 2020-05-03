@@ -1,0 +1,25 @@
+.root {
+  border: 2px solid gray;
+  height: 100px;
+  width: 100px;
+}
+
+.root:nth-child(-n + 3) {
+  border-top: none;
+}
+
+.root:nth-child(3n) {
+  border-right: none;
+}
+
+.root:nth-child(n + 7) {
+  border-bottom: none;
+}
+/* wtf is going on here */
+.root:nth-child(3n-2) {
+  border-left: none;
+}
+
+.root:nth-child(3n-1) {
+  border-left: 0px solid gray;
+}
