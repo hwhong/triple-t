@@ -15,10 +15,13 @@ function App() {
     if (cellArray[i] === " ") {
       cellArray[i] = currentPlayer;
       setCellArray([...cellArray]);
-      const res = checkWinner();
-      console.log(res);
-      if (res) {
+      if (checkWinner()) {
         alert(`Player ${currentPlayer} Wins!`);
+        setCellArray(Array(9).fill(" "));
+      } else if (
+        cellArray.filter((item) => item === "X" || item === "O").length === 9
+      ) {
+        alert(`It's a Tie!`);
         setCellArray(Array(9).fill(" "));
       }
       setCurrentPlayer(currentPlayer === "O" ? "X" : "O");
