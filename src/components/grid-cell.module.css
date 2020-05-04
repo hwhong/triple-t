@@ -3,12 +3,18 @@
   justify-content: center;
   font-family: monospace;
   align-items: center;
+  border-radius: 5px;
   font-weight: bold;
   color: #3a85ce;
   font-size: 81px;
   display: flex;
   height: 150px;
   width: 150px;
+}
+
+.root:hover {
+  background-color: aliceblue;
+  transition: background-color 0.5s;
 }
 
 .circle {
