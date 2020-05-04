@@ -1,12 +1,17 @@
 .root {
+  border: 2px solid #d4d4d4;
   justify-content: center;
-  border: 2px solid gray;
-  font-size: xx-large;
   align-items: center;
-  color: black;
+  font-weight: bold;
+  color: #3a85ce;
+  font-size: 48px;
   display: flex;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
+}
+
+.circle {
+  color: #39b8d2;
 }
 
 .root:nth-child(-n + 3) {
@@ -21,10 +26,14 @@
   border-bottom: none;
 }
 /* wtf is going on here */
-.root:nth-child(3n-2) {
+.root:nth-child(1) {
   border-left: none;
 }
 
-.root:nth-child(3n-1) {
-  border-left: 0px solid gray;
+.root:nth-child(4) {
+  border-left: none;
+}
+
+.root:nth-child(7) {
+  border-left: none;
 }

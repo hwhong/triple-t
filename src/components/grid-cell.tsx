@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./grid-cell.module.css";
+import classNames from "classnames";
 
 interface GridCellProps {
   index: number;
@@ -9,7 +10,12 @@ interface GridCellProps {
 
 export const GridCell = (props: GridCellProps) => {
   return (
-    <div className={styles.root} onClick={() => props.onCellClick()}>
+    <div
+      className={classNames(styles.root, {
+        [styles.circle]: props.content === "O",
+      })}
+      onClick={() => props.onCellClick()}
+    >
       {props.content}
     </div>
   );
